@@ -31,7 +31,18 @@ import math
 def mediana(lista):
     #### ESCRIBIR CODIGO AQUI ####
 
-    return "Suerte!"
+    lista_ordenada = sorted(lista)
+    longitud = len(lista)
+    med = []
+
+    if (longitud % 2) == 0:
+        mitad = int(len(lista) / 2.0)
+        med.append(lista_ordenada[mitad - 1])
+        med.append(lista_ordenada[mitad])
+    else:
+        med.append(lista_ordenada[math.floor(len(lista) / 2.0)])
+
+    return med
 
     ###############################
 
